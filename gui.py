@@ -22,7 +22,7 @@ class TextField:
         """Prints TextField to game_display"""
         if self.background_color:
             pygame.draw.rect(game_display, self.background_color, self.coordinates + self.measures)
-        text_surface = pygame.font.Font('AmericanTypewriter.ttc', self.size).render(self.text, True, self.text_color)
+        text_surface = pygame.font.Font('BalsamiqSans-Regular.ttf', self.size).render(self.text, True, self.text_color)
         text_rect = text_surface.get_rect()
         text_rect.center = (self.get_middle_coordinates()[0] + correction_x, self.get_middle_coordinates()[1] + correction_y)
         game_display.blit(text_surface, text_rect)
